@@ -1,0 +1,10 @@
+services:
+  front:
+    build: ./front
+    volumes:
+      - ./front/:/workdir
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    ports:
+      - 3333:5173
