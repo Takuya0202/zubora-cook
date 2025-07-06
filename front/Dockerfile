@@ -1,8 +1,7 @@
 FROM node:22
-WORKDIR /app
-COPY ./react-app/package*.json ./
 WORKDIR /app/react-app
+COPY ./react-app/package*.json ./
 RUN npm install
-COPY ./react-app .
+COPY . .
 EXPOSE 5173
 CMD ["npm" , "run" , "dev"]
